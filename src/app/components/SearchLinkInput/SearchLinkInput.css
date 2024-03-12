@@ -1,0 +1,27 @@
+#searchLinkInput {
+  height: 50px;
+  background-color: #00000000;
+  padding: 0px 10px;
+  border: 2px solid #6c6c6c;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  transition: all 200ms;
+  width: calc(100% - 24px);
+}
+
+#searchLinkInput > input {
+  width: 100%;
+  font-size: 30px;
+  color: #dfdfdf;
+  background-color: #00000000;
+  border: none;
+  height: 100%;
+  padding-left: 10px;
+}
+
+#searchLinkInput > input:focus {
+  outline: none;
+}

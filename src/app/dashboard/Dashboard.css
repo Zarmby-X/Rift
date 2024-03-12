@@ -1,0 +1,62 @@
+#dashboardContainer {
+  width: 95%;
+  max-width: 1250px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  margin-top: 150px;
+}
+
+#dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#dashboardTittle {
+  color: #c8c8c8;
+  font-size: 40px;
+  letter-spacing: 4px;
+}
+
+#addLinkButton {
+  font-size: 20px;
+  height: 25px;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: #00000000;
+  border: none;
+  color: #d9d9d9;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+#addLinkButton:hover {
+  color: white;
+}
+
+#dashBoardLoadingContainer {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+@media (max-width: 1200px) {
+  #dashboardContainer {
+    margin-top: 100px;
+  }
+  #dashboardTittle {
+    font-size: 25px;
+  }
+  #addLinkButton {
+    font-size: 16px;
+  }
+}
+
+

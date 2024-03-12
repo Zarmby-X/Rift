@@ -1,0 +1,35 @@
+#clipBoardAlertWrap {
+  position: fixed;
+  background-color: rgb(29, 29, 29);
+  margin: auto;
+  bottom: 20px;
+  width: 200px;
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: calc(50% - 100px);
+  opacity: 0;
+  animation: alertAppear 2s linear;
+}
+
+@keyframes alertAppear {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#clipBoardAlertWrap > p {
+  letter-spacing: 2px;
+  font-size: 18px;
+}

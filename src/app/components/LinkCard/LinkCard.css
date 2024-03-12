@@ -1,0 +1,162 @@
+.linkCardContainer {
+  border: 2px solid #6c6c6c;
+  height: 133px;
+  padding-left: 10px;
+  position: relative;
+  transition: all 200ms;
+  width: calc(100% - 12px);
+  overflow: hidden;
+}
+
+.linkCardContainer:hover {
+  border: 2px solid #bebebe;
+  box-shadow: 0px 0px 10px 0px #ffffff13;
+}
+
+.cardOptionsButtons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #00000000;
+  color: white;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+
+.cardOptionPoint {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: white;
+  position: relative;
+}
+
+.cardOptionPoint::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: white;
+  transform: translateY(10px);
+  left: 0;
+}
+
+.cardOptionPoint::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: white;
+  transform: translateY(20px);
+  left: 0;
+}
+
+.LinkCardHeader {
+  width: 80%;
+}
+
+.LinkCardTittle {
+  font-size: 40px;
+  color: #d4d4d4;
+  letter-spacing: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.linkCardSubTittle {
+  color: #a4a4a4;
+  font-size: 20px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.linkCardFooter {
+  width: 285px;
+  position: absolute;
+  bottom: 5px;
+}
+
+.linkCardDesc {
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardCopyButton {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 20px;
+  bottom: 10px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+.cardCopyButton:hover {
+  transform: scale(1.2);
+}
+
+.squareIconCopyButton {
+  width: 12px;
+  height: 12px;
+  border: 1px solid white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.squareIconCopyButton::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #040404;
+  border: 1px solid white;
+  position: absolute;
+  left: 4px;
+  top: 3px;
+}
+
+/* .backgroundWrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url("../../../assets/patron-tinta.jpg");
+  background-size: 300px;
+  mix-blend-mode: soft-light;
+} */
+
+/* .colorBg {
+  background: linear-gradient(
+    45deg,
+    rgb(0, 4, 44) 25%,
+    rgb(12, 0, 106) 50%,
+    rgb(0, 51, 160) 75%,
+    rgb(0, 193, 236) 100%
+  );
+  background-color: #191919;
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+} */

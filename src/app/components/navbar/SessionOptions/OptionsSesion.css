@@ -1,0 +1,214 @@
+#accountInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  margin-right: 10px;
+}
+
+#accountOptionsIcon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+}
+
+#accountOptionsIconline {
+  width: 50%;
+  height: 2px;
+  position: absolute;
+}
+
+#accountOptionsIconline::after {
+  content: "";
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  transform: rotate(-45deg) translateX(0px);
+  left: 3px;
+}
+
+#accountOptionsIconline::before {
+  content: "";
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  transform: rotate(45deg) translateX(-0px);
+  right: 3px;
+}
+
+#signInButton {
+  background-color: #00000000;
+  outline: none;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#signInButton > div {
+  width: 10px;
+  height: 1px;
+  background-color: white;
+  margin-left: 8px;
+  position: relative;
+}
+
+#signInButton > div::after {
+  content: "";
+  width: 5px;
+  background-color: white;
+  position: absolute;
+  height: 1px;
+  transform: rotate(45deg);
+  top: -2px;
+}
+
+#signInButton > div::before {
+  content: "";
+  width: 5px;
+  background-color: white;
+  position: absolute;
+  height: 1px;
+  transform: rotate(-45deg);
+  top: 2px;
+}
+
+#navOptionsMenu {
+  background-color: #1b1b1b;
+  position: absolute;
+  padding: 5px;
+  top: 40px;
+  right: 0px;
+  cursor: default;
+  z-index: 10;
+  animation: displayNavOptions 400ms linear;
+}
+
+@keyframes displayNavOptions {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#navOptionsMenu::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #1b1b1b;
+  position: absolute;
+  top: -15px;
+  right: 15px;
+  z-index: -1;
+  transform: rotateZ(45deg);
+}
+
+.navOption {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 8px;
+  transition: all 300ms;
+}
+
+.navOption:hover {
+  background-color: #474747;
+}
+
+.navOption > p {
+  font-size: 18px;
+}
+
+#mobileMenuButton {
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+
+#mobileMenuButtonLine {
+  width: 100%;
+  height: 2px;
+  background-color: #dddddd;
+}
+
+#mobileNavOptionsMenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0f0f0f;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: menuInAnimation 200ms linear;
+  gap: 20px;
+}
+
+.movileMenuOption {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 25px;
+}
+
+@keyframes menuInAnimation {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 650px) {
+  #accountInfo {
+    display: none;
+  }
+
+  #mobileMenuButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #mobileMenuButton::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #ffffff;
+    transform: translateY(-10px);
+  }
+
+  #mobileMenuButton::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #ffffff;
+    transform: translateY(10px);
+  }
+}

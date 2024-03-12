@@ -1,0 +1,82 @@
+.optionsCardMenuWrap {
+  background-color: #1c1c1c;
+  position: absolute;
+  padding: 2px;
+  z-index: 3;
+  right: 45px;
+  top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  animation: showMenu 200ms linear;
+  gap: 2px;
+}
+
+@keyframes showMenu {
+  0% {
+    height: 0px;
+    overflow: hidden;
+  }
+  100% {
+    height: 100px;
+    overflow: hidden;
+  }
+}
+
+.optionsCardMenuWrap::before {
+  content: "";
+  position: absolute;
+  background-color: #1c1c1c;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -10px;
+  top: 5px;
+  transform: rotate(45deg);
+  z-index: -1;
+  animation: showMenuSpyke 100ms linear 200ms;
+}
+
+@keyframes showMenuSpyke {
+  0% {
+    transform: translateX(-10px) rotate(45deg);
+  }
+  100% {
+    transform: translateX(0px) rotate(45deg);
+  }
+}
+
+.cardMenuOption {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.cardMenuOption:hover {
+  background-color: #3a3a3a;
+}
+
+.cardMenuOption:hover > p {
+  color: #ffffff;
+}
+
+.menuOptionIcon {
+  user-select: none;
+  transform: translateY(-1px);
+}
+
+.cardMenuOption > p {
+  color: #d0d0d0;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.cardMenuSeparator {
+  height: 1px;
+  background-color: #828282;
+}

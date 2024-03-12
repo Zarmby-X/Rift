@@ -1,0 +1,199 @@
+#urlInfoModalWrap {
+  z-index: 1000;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.167);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modalContainer {
+  width: 500px;
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  animation: modalInAnimation 300ms ease-out;
+  padding: 40px;
+  border: 1px solid #aaaaaa;
+}
+
+@keyframes modalInAnimation {
+  0% {
+    filter: blur(5px);
+    transform: translateY(-1000px);
+  }
+  100% {
+    filter: blur(5px);
+    transform: translateY(0px);
+  }
+}
+
+#modalFlexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#loadingMsj {
+  color: #26aad2;
+  text-shadow: 0px 0px 8px #26aad2;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+#modalUrlHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#updateUrlTittle {
+  font-size: 40px;
+  color: #abf970;
+  text-shadow: 0px 0px 10px #abf970;
+}
+
+#newUrlTittle {
+  font-size: 40px;
+  color: #43d3ff;
+  text-shadow: 0px 0px 10px #43d3ff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+form > label {
+  font-size: 36px;
+  color: #d4d4d4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#aliasAdvice {
+  font-size: 16px;
+  color: #e9e77d;
+  text-shadow: 0px 0px 8px #e9e77d;
+  animation: adviceAppear 200ms linear;
+}
+
+@keyframes adviceAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+form > input {
+  height: 50px;
+  font-size: 24px;
+  background-color: #0c0c0c;
+  border: 2px solid #6b6b6b;
+  transition: all 300ms;
+  color: #c8c8c8;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+}
+
+#urlInputWrap {
+  width: 100%;
+}
+
+#urlInputWrap > input {
+  height: 50px;
+  font-size: 24px;
+  background-color: #0c0c0c;
+  border: 2px solid #6b6b6b;
+  transition: all 300ms;
+  color: #c8c8c8;
+  width: calc(100% - 14px);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+form > input:focus {
+  outline: none;
+  border: 2px solid #ffffff;
+}
+
+#formButtonsWrap {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#modalAcceptButton {
+  background-color: #000000;
+  color: #d3d3d3;
+  border: 2px solid #888888;
+  width: 170px;
+  height: 65px;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+#modalAcceptButton:hover {
+  color: #e8e8e8;
+  border: 2px solid #b4b4b4;
+}
+
+#modalCancelButton {
+  background-color: #350505;
+  color: #d3d3d3;
+  border: 2px solid #888888;
+  width: 170px;
+  height: 65px;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+#modalCancelButton:hover {
+  color: #e8e8e8;
+  border: 2px solid #b4b4b4;
+}
+
+#alertMessage {
+  background-color: #b64040;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0px;
+}
+
+@media (max-width: 619px) {
+  #modalContainer {
+    width: 100vw;
+    height: 100vh;
+  }
+  #modalFlexColumn {
+    width: 90%;
+  }
+  #modalAcceptButton {
+    width: 120px;
+    font-size: 28px;
+  }
+  #modalCancelButton {
+    width: 120px;
+    font-size: 28px;
+  }
+}
