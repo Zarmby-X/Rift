@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Loading from "../components/Loading/Loading";
 import "./page.css";
 import { Stick_No_Bills } from "next/font/google";
 import Image from "next/image";
@@ -13,7 +12,7 @@ const stick_No_Bills = Stick_No_Bills({
   subsets: ["latin"],
 });
 
-export default function redirectPage({ params }) {
+export default function RedirectPage({ params }) {
   const [originUrl, setOriginUrl] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -23,7 +22,7 @@ export default function redirectPage({ params }) {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        riftUrl: `http://localhost:3000/${params.riftUrl}`,
+        riftUrl: "http://localhost:3000/" + params.riftUrl,
       },
     })
       .then((res) => res.json())
@@ -68,7 +67,7 @@ export default function redirectPage({ params }) {
         <Image src={Logo} priority alt="rift logo" width={500}></Image>
       </div>
       <p className={stick_No_Bills.className}>
-        Sorry but this url does't exist.
+        {"Sorry but this url does not exist."}
       </p>
     </div>
   );

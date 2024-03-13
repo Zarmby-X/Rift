@@ -22,7 +22,7 @@ const stick_No_Bills = Stick_No_Bills({
   style: "normal",
 });
 
-export default function home() {
+export default function Home() {
   const { data: session } = useSession();
   const router = useRouter();
 
