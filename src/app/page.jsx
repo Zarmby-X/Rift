@@ -26,10 +26,6 @@ export default function home() {
   const { data: session } = useSession();
   const router = useRouter();
 
-  // if (session) {
-  //   router.push("/dashboard");
-  // }
-
   return (
     <div id="homeMainContainer">
       <h1 className={bebas_Neue.className}>Rift - Shortener Url</h1>
@@ -38,7 +34,13 @@ export default function home() {
         <button id="aboutButton" className={stick_No_Bills.className}>
           About
         </button>
-        <button id="githubButton" className={stick_No_Bills.className}>
+        <button
+          id="githubButton"
+          className={stick_No_Bills.className}
+          onClick={() =>
+            window.open("https://github.com/Zarmby-X/Rift", "_blank")
+          }
+        >
           Github
         </button>
       </div>

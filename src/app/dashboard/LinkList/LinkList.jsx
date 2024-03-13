@@ -71,6 +71,7 @@ export default function LinkList(props) {
       <SearchLinkInput filterUrl={filterUrl}></SearchLinkInput>
       {!filteredUrls.length > 0 && !notMatchUrls && (
         <div id="linksContainers">
+          {console.log(urls)}
           {urls.urls.map((url) => {
             return (
               <LinkCard
