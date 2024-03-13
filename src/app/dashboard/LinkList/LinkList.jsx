@@ -46,7 +46,7 @@ export default function LinkList(props) {
   };
 
   useEffect(() => {
-    fetch("https://rift-git-main-zarmby-xs-projects.vercel.app/api/urls", {
+    fetch("https://rift-zarmby-xs-projects.vercel.app/api/urls", {
       headers: {
         jwt: props.token,
       },
