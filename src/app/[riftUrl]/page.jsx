@@ -18,12 +18,12 @@ export default function RedirectPage({ params }) {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`https://rift-zarmby-xs-projects.vercel.app/api/redirect`, {
+    fetch(`https://riftn.vercel.app/api/redirect`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
         riftUrl:
-          "https://rift-zarmby-xs-projects.vercel.app/" +
+          "https://riftn.vercel.app/" +
           params.riftUrl,
       },
     })
