@@ -18,11 +18,11 @@ export default function RedirectPage({ params }) {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:3000/api/redirect`, {
+    fetch(`https://riftn.vercel.app/api/redirect`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        riftUrl: "http://localhost:3000/" + params.riftUrl,
+        riftUrl: "https://riftn.vercel.app/" + params.riftUrl,
       },
     })
       .then((res) => res.json())

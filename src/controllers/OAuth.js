@@ -1,6 +1,6 @@
 async function singInOAuth(account) {
   try {
-    const tokenRequest = await fetch("http://localhost:3000/api/auth/login", {
+    const tokenRequest = await fetch(process.env.DOMAIN + "api/auth/login", {
       method: "POST",
       body: JSON.stringify({
         access_token: account.access_token,
