@@ -40,7 +40,7 @@ export default function UrlInfoModal(props) {
         originalUrl: props.url.originalUrl,
       });
     }
-  }, []);
+  }, [props.url]);
 
   const handleChange = (event) => {
     validateData(event.target.name, event.target.value);

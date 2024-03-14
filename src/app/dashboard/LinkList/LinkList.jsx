@@ -56,7 +56,7 @@ export default function LinkList(props) {
         setUrls(data);
         setLoading(false);
       });
-  }, []);
+  }, [props.token]);
 
   if (loading) {
     return (

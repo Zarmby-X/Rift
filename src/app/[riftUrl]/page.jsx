@@ -39,7 +39,7 @@ export default function RedirectPage({ params }) {
           }, 1000);
         }
       });
-  }, []);
+  }, [params.riftUrl]);
 
   if (originUrl) {
     window.location.assign(originUrl);
