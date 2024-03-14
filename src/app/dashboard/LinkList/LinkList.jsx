@@ -46,7 +46,7 @@ export default function LinkList(props) {
   };
 
   useEffect(() => {
-    fetch("https://riftn.vercel.app/api/urls", {
+    fetch("api/urls", {
       headers: {
         jwt: props.token,
       },
