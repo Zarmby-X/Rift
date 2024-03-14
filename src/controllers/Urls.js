@@ -2,7 +2,7 @@ import prisma from "../libs/db";
 
 async function createUrlApi(jwt, data) {
   try {
-    const request = await fetch(process.env.DOMAIN + "api/urls", {
+    const request = await fetch("https://riftn.vercel.app/api/urls", {
       method: "POST",
       body: JSON.stringify({
         jwt: jwt,
@@ -19,7 +19,7 @@ async function createUrlApi(jwt, data) {
 
 async function deleteUrlApi(jwt, id) {
   try {
-    const request = await fetch(process.env.DOMAIN + "api/urls", {
+    const request = await fetch("https://riftn.vercel.app/api/urls", {
       method: "DELETE",
       body: JSON.stringify({
         jwt: jwt,
@@ -35,7 +35,7 @@ async function deleteUrlApi(jwt, id) {
 
 async function updateUrlApi(jwt, data) {
   try {
-    const request = await fetch(process.env.DOMAIN + "api/urls", {
+    const request = await fetch("https://riftn.vercel.app/api/urls", {
       method: "PUT",
       body: JSON.stringify({
         jwt: jwt,
