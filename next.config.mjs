@@ -16,7 +16,7 @@ const nextConfig = {
           },
           {
             key: "Access-Control-Allow-Headers",
-            value: "X-Requested-With, Content-Type, Authorization", // Encabezados permitidos
+            value: "X-Requested-With, Content-Type, Authorization, jwt", // Encabezados permitidos
           },
         ],
       },
