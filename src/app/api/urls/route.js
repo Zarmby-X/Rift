@@ -71,7 +71,7 @@ export async function DELETE(req) {
       error: tokenValidation.msj,
     },
     {
-      status: 404,
+      status: 200,
     }
   );
 }
